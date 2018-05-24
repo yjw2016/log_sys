@@ -37,3 +37,12 @@ func main() {
 		time.Sleep(10 * time.Millisecond)
 	}
 }
+
+/*
+运行，
+先启动zk & kafka
+zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties & kafka-server-start /usr/local/etc/kafka/server.properties
+使用kafka消费者消费队列中的消息,注意地址端口参数为zk的，不是生产者的
+kafka-console-consumer --topic nginx_log --zookeeper 127.0.0.1 2181
+测试生产者
+*/
