@@ -63,7 +63,7 @@ func InitTail(conf []CollectConf, chanSize int) (err error) {
 		}
 
 		obj.tail = tails
-		fmt.Printf("tailObjMgr:%v 以及 obj:%v\n", tailObjMgr, obj)
+		//fmt.Printf("tailObjMgr:%v 以及 obj:%v\n", tailObjMgr, obj)
 		tailObjMgr.tailObjs = append(tailObjMgr.tailObjs, obj)
 		go readFromTail(obj)
 	}

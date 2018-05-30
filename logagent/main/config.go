@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/astaxie/beego/config"
 	"log_sys/logagent/tailf"
+	"github.com/astaxie/beego/logs"
 )
 
 var (
@@ -15,7 +16,7 @@ type Config struct {
 	logLevel string
 	logPath  string
 	chanSize int
-
+	kafkaAddr string
 	collectConf []tailf.CollectConf
 }
 
@@ -33,7 +34,7 @@ func loadCollectConf(conf config.Configer) (err error) {
 		return
 	}
 
-	fmt.Printf("cc is %v\n", cc)
+	//fmt.Printf("cc is %v\n", cc)
 	appConfig.collectConf = append(appConfig.collectConf, cc)
 
 	return
@@ -60,7 +61,11 @@ func loadConf(confType, filename string) (err error) {
 	if err != nil {
 		appConfig.chanSize = 100
 	}
-
+	appConfig.kafkaAddr = conf.String("kafka::server_addr")
+	if len(appConfig.kafkaAddr) == 0 {
+		logs.Error("invalid kafka address")
+		appConfig.kafkaAddr = "192.168.14.7:9092"
+	}
 	err = loadCollectConf(conf)
 	if err != nil {
 		fmt.Println("load collect conf failed :%v\n", err)

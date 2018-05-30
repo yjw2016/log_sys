@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/astaxie/beego/logs"
 	"log_sys/logagent/tailf"
+	"log_sys/logagent/kafka"
 	"time"
 )
 
@@ -30,13 +31,21 @@ func main() {
 		logs.Error("init tail failed ,err:%v", err)
 		return
 	}
+	logs.Debug("init tailf succ")
+
+	err = kafka.InitKafka(appConfig.kafkaAddr)
+	if err != nil {
+		logs.Error("init tail failed,err:%v",err)
+		return
+	}
+
 
 	logs.Debug("initialize all succ")
 
 	go func() {
 		for i:=0;i<60;i++ {
 			logs.Debug("test for logger %d,", i)
-			time.Sleep(time.Millisecond*800)
+			time.Sleep(time.Second)
 		}
 	}()
 

@@ -5,6 +5,7 @@ import (
 	"github.com/astaxie/beego/logs"
 	"log_sys/logagent/tailf"
 	"time"
+	"log_sys/logagent/kafka"
 )
 
 func serverRun() (err error) {
@@ -21,8 +22,12 @@ func serverRun() (err error) {
 	return
 }
 
-func sendToKafka(msg *tailf.TextMsg) (err error) {
+func sendToKafka(msg *tailf.TextMsg) (e error) {
 
-	fmt.Printf("read msg:%v,topic:%v\n", msg.Msg, msg.Topic)
+	e = kafka.Send2kafka(msg.Msg, msg.Topic)
+	if e != nil {
+		fmt.Println("发送kafka失败")
+	}
+	//fmt.Printf("read msg:%v,topic:%v\n", msg.Msg, msg.Topic)
 	return
 }
