@@ -1,31 +1,14 @@
-2018/05/29 19:13:47.033 [D] load conf succ ,config:&{debug ./logs/logagent.log 100 [{/Users/yjw/go/src/log_sys/logagent/logs/logagent.log nginx_log}]}
-2018/05/29 19:13:47.033 [D] initialize all succ
-2018/05/29 19:13:47.033 [D] test for logger 0,
-2018/05/29 19:13:47.839 [D] test for logger 1,
-2018/05/29 19:13:48.643 [D] test for logger 2,
-2018/05/29 19:13:49.444 [D] test for logger 3,
-2018/05/29 19:13:50.245 [D] test for logger 4,
-2018/05/29 19:13:51.049 [D] test for logger 5,
-2018/05/29 19:14:58.430 [D] load conf succ ,config:&{debug ./logs/logagent.log 100 [{/Users/yjw/go/src/log_sys/logagent/logs/logagent.log nginx_log}]}
-2018/05/29 19:14:58.430 [D] initialize all succ
-2018/05/29 19:14:58.430 [D] test for logger 0,
-2018/05/29 19:14:59.234 [D] test for logger 1,
-2018/05/29 19:15:00.037 [D] test for logger 2,
-2018/05/29 19:15:00.841 [D] test for logger 3,
-2018/05/29 19:15:01.645 [D] test for logger 4,
-2018/05/29 19:15:02.450 [D] test for logger 5,
-2018/05/29 19:15:03.254 [D] test for logger 6,
-2018/05/29 19:15:04.059 [D] test for logger 7,
-2018/05/29 19:15:04.862 [D] test for logger 8,
-2018/05/29 19:15:05.667 [D] test for logger 9,
-2018/05/29 19:15:06.472 [D] test for logger 10,
-2018/05/29 19:15:32.969 [D] load conf succ ,config:&{debug ./logs/logagent.log 100 [{/Users/yjw/go/src/log_sys/logagent/logs/logagent.log nginx_log}]}
-2018/05/29 19:15:32.970 [D] initialize all succ
-2018/05/29 19:15:32.970 [D] test for logger 0,
-2018/05/29 19:15:33.775 [D] test for logger 1,
-2018/05/29 19:15:34.577 [D] test for logger 2,
-2018/05/29 19:15:35.380 [D] test for logger 3,
-2018/05/29 19:15:36.180 [D] test for logger 4,
-2018/05/29 19:15:36.981 [D] test for logger 5,
-2018/05/29 19:15:37.782 [D] test for logger 6,
-2018/05/29 19:15:38.587 [D] test for logger 7,
+2018/05/30 17:17:47.202 [D] load conf succ ,config:&{debug ./logs/logagent.log 100 192.168.1.102:9092 [{/Users/yjw/go/src/log_sys/logagent/logs/logagent.log nginx_log}]}
+2018/05/30 17:17:47.202 [D] init tailf succ
+2018/05/30 17:17:47.204 [D] init kafka succ
+2018/05/30 17:17:47.204 [D] initialize all succ
+2018/05/30 17:17:47.204 [D] test for logger 0,
+2018/05/30 17:17:48.209 [D] test for logger 1,
+2018/05/30 17:17:49.210 [D] test for logger 2,
+2018/05/30 17:17:50.211 [D] test for logger 3,
+2018/05/30 17:17:51.213 [D] test for logger 4,
+2018/05/30 17:17:52.216 [D] test for logger 5,
+2018/05/30 17:17:53.219 [D] test for logger 6,
+2018/05/30 17:17:54.220 [D] test for logger 7,
+2018/05/30 17:17:55.226 [D] test for logger 8,
+2018/05/30 17:17:56.231 [D] test for logger 9,
