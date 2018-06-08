@@ -1,7 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+	"time"
+)
 
 func main() {
-	fmt.Println("hello world, project start")
+	os.Exit(realMain())
+}
+
+func realMain() int {
+	fmt.Println("real main")
+	for i := 0; i < 100; i++ {
+		time.Sleep(time.Second)
+	}
+	fmt.Println("real main end")
+	return 0
 }
